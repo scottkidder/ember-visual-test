@@ -68,7 +68,11 @@ module.exports = {
     let options = this.visualTest;
 
     let flags = [
-      '--enable-logging'
+      '--enable-logging',
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+      '--disable-software-rasterizer',
+      '--font-render-hinting=medium'
     ];
 
     let noSandbox = options.noSandbox;
