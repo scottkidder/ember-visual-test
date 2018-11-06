@@ -77,6 +77,8 @@ export function prepareCaptureMode() {
     div.setAttribute('id', 'visual-test-has-loaded');
     document.body.appendChild(div);
   }
+
+  window.dispatchEvent(new Event('resize'));
 }
 
 export async function requestCapture(url, fileName, { selector, fullPage, delayMs }) {

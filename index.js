@@ -137,6 +137,7 @@ module.exports = {
       return { newBaseline: false, newScreenshotUrl: null, chromeError: true };
     }
 
+    // console.log('tab going to url:', url);
     await tab.goTo(url);
 
     // This is inserted into the DOM by the capture helper when everything is ready
