@@ -151,6 +151,12 @@ module.exports = {
 
     let screenshotOptions = { selector, fullPage };
 
+    await tab.evaluate(function(selector) {
+      console.log('dispatching resize event');
+
+      window.dispatchEvent(new Event('resize'));
+    });
+
     // To avoid problems...
     await tab.wait(delayMs);
 
