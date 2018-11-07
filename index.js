@@ -168,6 +168,8 @@ module.exports = {
       window.dispatchEvent(new Event('resize'));
     });
 
+    await tab.wait(100);
+
     // only if the file does not exist, or if we force to save, do we write the actual images themselves
     let newScreenshotUrl = null;
     let newBaseline = options.forceBuildVisualTestImages || !fs.existsSync(fullPath);
