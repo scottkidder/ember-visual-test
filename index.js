@@ -92,6 +92,7 @@ module.exports = {
       deviceMetrics: {
         width: options.windowWidth,
         height: options.windowHeight,
+        moblie: true
       },
       browser: {
         browserLog: options.debugLogging
