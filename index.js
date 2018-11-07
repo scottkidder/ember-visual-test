@@ -31,6 +31,7 @@ module.exports = {
     chromePort: 0,
     windowWidth: 1024,
     windowHeight: 768,
+    mobile: false,
     noSandbox: false
   },
 
@@ -92,7 +93,7 @@ module.exports = {
       deviceMetrics: {
         width: options.windowWidth,
         height: options.windowHeight,
-        moblie: true
+        mobile: options.mobile
       },
       browser: {
         browserLog: options.debugLogging
