@@ -79,6 +79,10 @@ export function prepareCaptureMode() {
   }
 
   window.dispatchEvent(new Event('resize'));
+  window.setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, 100);
+
 }
 
 export async function requestCapture(url, fileName, { selector, fullPage, delayMs }) {
