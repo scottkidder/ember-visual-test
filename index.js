@@ -147,7 +147,7 @@ module.exports = {
     await tab.goTo(url);
 
     // This is inserted into the DOM by the capture helper when everything is ready
-    await tab.waitForPageToLoad(2500);
+    await tab.waitForPageToLoad(7500);
     await tab.waitForSelectorToLoad('#visual-test-has-loaded', 250);
 
     let fullPath = `${path.join(options.imageDirectory, fileName)}.png`;
