@@ -72,7 +72,7 @@ module.exports = {
       '--disable-gpu',
       '--disable-dev-shm-usage',
       '--disable-software-rasterizer',
-      '--font-render-hinting=medium',
+      '--font-render-hinting=none',
       '--enable-font-antialiasing'
     ];
 
