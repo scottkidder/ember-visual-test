@@ -77,6 +77,7 @@ export function prepareCaptureMode() {
     div.setAttribute('id', 'visual-test-has-loaded');
     document.body.appendChild(div);
 
+    // Send a resize event now that everything is loaded
     window.dispatchEvent(new Event('resize'));
   }
 }
