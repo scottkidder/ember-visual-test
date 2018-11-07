@@ -147,17 +147,11 @@ module.exports = {
     await tab.goTo(url);
 
     // This is inserted into the DOM by the capture helper when everything is ready
-    await tab.waitForSelectorToLoad('#visual-test-has-loaded', { interval: 100 });
+    await tab.waitForSelectorToLoad('#visual-test-has-loaded', { interval: 250 });
 
     let fullPath = `${path.join(options.imageDirectory, fileName)}.png`;
 
     let screenshotOptions = { selector, fullPage };
-
-    await tab.evaluate(function(selector) {
-      console.log('dispatching resize event');
-
-      window.dispatchEvent(new Event('resize'));
-    });
 
     // To avoid problems...
     await tab.wait(delayMs);
@@ -168,7 +162,7 @@ module.exports = {
       window.dispatchEvent(new Event('resize'));
     });
 
-    await tab.wait(100);
+    await tab.wait(250);
 
     // only if the file does not exist, or if we force to save, do we write the actual images themselves
     let newScreenshotUrl = null;

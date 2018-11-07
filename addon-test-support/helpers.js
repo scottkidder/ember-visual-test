@@ -78,7 +78,6 @@ export function prepareCaptureMode() {
     document.body.appendChild(div);
   }
 
-  window.dispatchEvent(new Event('resize'));
   window.setTimeout(() => {
     window.dispatchEvent(new Event('resize'));
   }, 100);
