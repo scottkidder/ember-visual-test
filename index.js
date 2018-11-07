@@ -72,7 +72,8 @@ module.exports = {
       '--disable-gpu',
       '--disable-dev-shm-usage',
       '--disable-software-rasterizer',
-      '--font-render-hinting=medium'
+      '--font-render-hinting=medium',
+      '--enable-font-antialiasing'
     ];
 
     let noSandbox = options.noSandbox;
