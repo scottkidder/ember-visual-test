@@ -301,7 +301,7 @@ module.exports = {
 
         data.status = 'ERROR';
         data.diffPath = diffPath;
-        data.fullDiffPath = path.join(__dirname, diffPath);
+        // data.fullDiffPath = path.join(__dirname, diffPath);
         data.error = `${errorPixelCount} pixels differ - diff: ${diffPath}, img: ${tmpPath}`;
 
         res.send(data);
